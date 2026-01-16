@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+header
+{
+    padding: 20px 0 50px;
+    position: relative;
+}
+header::after{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(./img/bg-main.jpg);
+    background-position: center center;
+    background-size: cover;
+}
+header .title
+{
+    text-align: center;
+    font-size: 3rem;
+}
+.wrapper
+{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: wrap;
+    gap: 10px;
+}
+.card
+{
+    max-width: 310px;
+    width: 100%;
+    border: 1px solid;
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornsilk;
+    cursor: pointer;
+    transition: .3s linear all;
+}
+.card.checked
+{
+    background-color: darkred;
+}
+.card.checked p
+{
+    color: white;
+}
+.card:not(.checked):hover{
+    background-color: brown;
+}
+.card p
+{
+    text-align: center;
+    transition: .3s all linear;
+}
+.card:not(.checked):hover p
+{
+    color: white;
+}
+
